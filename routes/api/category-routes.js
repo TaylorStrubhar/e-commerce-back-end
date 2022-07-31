@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       res.status(404).json({message: 'No categories were found'});
       return;
     }
-    res.join(dbCatData);
+    res.json(dbCatData);
   }).catch(err => {
     console.log(err);
     res.status(500).json(err)
